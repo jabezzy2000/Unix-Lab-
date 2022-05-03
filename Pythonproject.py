@@ -2,7 +2,7 @@ import sys
 #creating a ceaser cypher
 letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 #length = 26
-shift = sys.argv
+shift = int(input("What number do you want to shift alphabets by: "))
 #shift = int(input("Enter the number of shifts you want: "))
 message = input("Input the message: ")
 message= message.upper()
