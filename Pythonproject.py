@@ -2,13 +2,13 @@ import sys
 #creating a ceaser cypher
 letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
 #length = 26
-shift = int(input("What number do you want to shift alphabets by: "))
+shift = int(sys.argv[1])
 #shift = int(input("Enter the number of shifts you want: "))
 message = input("Input the message: ")
 message= message.upper()
 empty_str = ""
-minimum_shift = 27 - shift
-for i in sys.stdin:
+minimum_shift = 26 - shift
+for i in message:
     if i == " ":
         empty_str += i
     else:
@@ -18,7 +18,7 @@ for i in sys.stdin:
                 position = position + shift
                 empty_str+= letters[position]
             elif position >= minimum_shift:
-                position = positon + shift - 26
+                position = position + shift - 26
                 empty_str += letters[position]
 
 
